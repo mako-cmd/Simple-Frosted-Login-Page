@@ -2,7 +2,6 @@ class Validator {
 
     form = '';
 
-
     fields = {
         email: [],
         password: [],
@@ -60,7 +59,7 @@ class Validator {
             document.getElementsByClassName('form-wrapper')[0].style.overflowY = 'hidden';
         }
         //if check for correct segmenting
-        else if (/^(^[A-Z0-9][A-Z0-9\.!#$%&'*+-/=?^_`{|]{0,63})(?:@)([A-Z0-9][A-Z0-9\-\.]{0,63})(?:\.)([A-Z\-\.]{1,63})/gi.test(email)) {
+        else if (/^(^[A-Z0-9][A-Z0-9\.!#$%&'*+-/=?^_`{|]{0,63})(?:@)([A-Z0-9][A-Z0-9\-\.]{0,63}[A-Z0-9]{1})(?:\.)([A-Z0-9]{1}[A-Z\d\-\.]{0,63}[A-Z\d]$)/gi.test(email)) {
             this.isValid = true;
             this.fields.email.style.background = 'rgba(28,230,30,0.3)'
             //Hide tooltip
