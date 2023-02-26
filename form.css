@@ -71,6 +71,7 @@ body {
   top: 0px;
   transition: 0.3s;
   color: white;
+  z-index: -1;
 }
 
 .form-field {
@@ -80,6 +81,7 @@ body {
   height: 5vh;
   background: transparent;
   border-bottom: solid lightgray 2px;
+  z-index: 1;
 }
 
 .form-field:focus {
